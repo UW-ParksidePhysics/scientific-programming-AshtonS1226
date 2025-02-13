@@ -1,1 +1,64 @@
+Last login: Thu Feb 13 08:21:13 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+grnq61-81:~ parkerw$ pwd
+/Users/parkerw
+grnq61-81:~ parkerw$ ls
+Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public
+grnq61-81:~ parkerw$ cd Downloads
+grnq61-81:Downloads parkerw$ pwd
+/Users/parkerw/Downloads
+grnq61-81:Downloads parkerw$ ls /home/
+grnq61-81:Downloads parkerw$ ~
+-bash: /Users/parkerw: is a directory
+grnq61-81:Downloads parkerw$ cd ~
+grnq61-81:~ parkerw$ pwd
+/Users/parkerw
+grnq61-81:~ parkerw$ scientific-programming-AshtonS1226/Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226
+grnq61-81:~ parkerw$ Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226/
+-bash: Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226/: No such file or directory
+grnq61-81:~ parkerw$ /Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226
+-bash: /Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226: is a directory
+grnq61-81:~ parkerw$ pwd
+/Users/parkerw
+grnq61-81:~ parkerw$ /Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226
+-bash: /Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226: is a directory
+grnq61-81:~ parkerw$ pwd
+/Users/parkerw
+grnq61-81:~ parkerw$ scientific-programming-AshtonS1226/Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226
+-bash: scientific-programming-AshtonS1226/Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226: No such file or directory
+grnq61-81:~ parkerw$ /Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226
+-bash: /Volumes/Home/Staff/parkerw/PycharmProjects/scientific-programming-AshtonS1226: is a directory
+grnq61-81:~ parkerw$ pwd\
+>
+/Users/parkerw
+grnq61-81:~ parkerw$ pwd
+/Users/parkerw
+grnq61-81:~ parkerw$ ls -1
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+Pictures
+Public
+grnq61-81:~ parkerw$ cd ~
+grnq61-81:~ parkerw$ pwd
+/Users/parkerw
+grnq61-81:~ parkerw$
+
+
+
+
+
+
+
+
+
+
+
+
 
