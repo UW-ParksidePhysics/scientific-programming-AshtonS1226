@@ -15,4 +15,4 @@ Decent
 * Division of responsibility
 We feel we were both evenly engaged
 * Code quality:
-Decent
+Code quality was decent
