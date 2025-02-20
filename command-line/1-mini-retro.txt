@@ -1,17 +1,18 @@
-Partner:
+Partner: Lindsey Brown
 
 What Went Well
----
+Communication, Attitudes, Pacing
 
 
 What Would Make Next Time 1% Better
----
+Trying to do things more independently and not asking professor for help constantly
 * Focus:
-
+We were focused on project and got it done in a decent time frame
 * Communication:
-
+Probably our strongest aspect
 * Pacing:
-
+Decent
 * Division of responsibility
-
+We feel we were both evenly engaged
 * Code quality:
+Code quality was decent
