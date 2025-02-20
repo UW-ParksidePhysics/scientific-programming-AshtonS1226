@@ -1,5 +1,7 @@
 # Concepts
-* Prompt
-* Directory
-* Shell
-* Redirectory
+* List
+* Tuple
+* String
+* Indent
+* Function
+
