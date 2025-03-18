@@ -1,4 +1,9 @@
-#### RENAME from project.py to (your_project_short_name).py
+"""
+This module will analyze different types of positive and negative feedback and analyze it.
+"""
+
+
+#### RENAME from growing_healthy.py to (your_project_short_name).py
 # File structure
 # 1. Commented paragraph describing project ~ 100-200 words
 # 2. Module imports that are used in multiple functions
