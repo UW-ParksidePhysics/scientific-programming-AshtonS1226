@@ -26,3 +26,4 @@ Mac619948:Documents smith518$ vi script.sh
 Mac619948:Documents smith518$ echo '#!/bin/sh\necho "Hello, world!"' > script.sh
 Mac619948:Documents smith518$ rm script.sh
 Mac619948:Documents smith518$
+

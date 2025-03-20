@@ -14,4 +14,4 @@ Learning the command line better
 
 * Division of responsibility: equal
 
-* Code quality: decent
+* Code quality: pretty decent
