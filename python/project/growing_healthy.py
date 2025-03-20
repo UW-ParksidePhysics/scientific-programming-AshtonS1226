@@ -31,7 +31,23 @@ def test_plot():
 
 
 if __name__ == '__main__':
-    test_plot()
+    object_data = {'Earth': 9.8, 'Moon': 1.6, 'Mars': 3.7} # surface gravity [m/s/s]
+    starting_velocity = 10 # m/s
+    times = np.linspace(0,5)
+    for planet_data in object_data.items():
+        velocities = velocity_in_time(times, initial_velocity=starting_velocity,
+                                      gravitational_acceleration=planet_data[1])
+        plt.plot( times, velocities, lavel=planet_data[0])
+
+    plt.text(0,-1, f'Initial velocity: {starting_velocity: .0f} m/s')
+    plt.xlabel("Time (s)")
+    plt.ylabel("Velocity (m/s)")
+    plt.legend()
+    plt.show()
+# Need to define velociy_in_time outside of class.
+    # test_plot()
+
+
 
 #### RENAME from growing_healthy.py to (your_project_short_name).py
 # File structure
