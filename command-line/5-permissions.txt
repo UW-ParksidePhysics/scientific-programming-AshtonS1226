@@ -1,1 +1,28 @@
+Last login: Thu Mar 20 08:26:47 on ttys001
 
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Mac619948:~ smith518$ cd ~/Documents
+Mac619948:Documents smith518$ touch notes.txt
+Mac619948:Documents smith518$ ls -l notes.txt
+-rwxr-----  1 smith518  UWP\Domain Users  0 Mar 20 08:40 notes.txt
+Mac619948:Documents smith518$ chmod u+x notes.txt
+Mac619948:Documents smith518$ chmod o-r notes.txt
+Mac619948:Documents smith518$ ls -l notes.txt
+-rwxr-----  1 smith518  UWP\Domain Users  0 Mar 20 08:40 notes.txt
+Mac619948:Documents smith518$ rn notes.txt
+-bash: rn: command not found
+Mac619948:Documents smith518$
+Mac619948:Documents smith518$ rm notes.txt
+Mac619948:Documents smith518$ echo '#!/bin/sh\necho "Hello, world!"' > script.sh
+Mac619948:Documents smith518$ ./script.sh
+-bash: ./script.sh: Permission denied
+Mac619948:Documents smith518$ chmod 755 script.sh
+Mac619948:Documents smith518$ ls -l
+total 8
+-rwxr-xr-x  1 smith518  UWP\Domain Users  32 Mar 20 08:43 script.sh
+Mac619948:Documents smith518$ vi script.sh
+Mac619948:Documents smith518$ echo '#!/bin/sh\necho "Hello, world!"' > script.sh
+Mac619948:Documents smith518$ rm script.sh
+Mac619948:Documents smith518$

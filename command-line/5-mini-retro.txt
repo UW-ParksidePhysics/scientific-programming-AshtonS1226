@@ -1,17 +1,17 @@
-Partner:
+Partner: Rileigh
 
 What Went Well
----
+Our communication
 
 
 What Would Make Next Time 1% Better
----
-* Focus:
+Learning the command line better
+* Focus: Good
 
-* Communication:
+* Communication: Great
 
-* Pacing:
+* Pacing: slow at first but picked up
 
-* Division of responsibility
+* Division of responsibility: equal
 
-* Code quality:
+* Code quality: decent
