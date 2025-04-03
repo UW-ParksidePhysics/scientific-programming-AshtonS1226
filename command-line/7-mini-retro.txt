@@ -1,17 +1,17 @@
-Partner:
+Partner: Eden
 
 What Went Well
----
+communication
 
 
 What Would Make Next Time 1% Better
----
-* Focus:
+Not having so many terminal's open.
+* Focus: Good
 
-* Communication:
+* Communication: Good
 
-* Pacing:
+* Pacing: Quick
 
-* Division of responsibility
+* Division of responsibility: Equal
 
-* Code quality:
+* Code quality: Good
