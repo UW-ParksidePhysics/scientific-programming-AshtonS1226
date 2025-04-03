@@ -1,17 +1,17 @@
-Partner:
+Partner: Eden
 
 What Went Well
----
+Everything other than finding the clone
 
 
 What Would Make Next Time 1% Better
----
-* Focus:
+Learning how to find the clone
+* Focus: Good
 
-* Communication:
+* Communication: Good
 
-* Pacing:
+* Pacing: Quick
 
-* Division of responsibility
+* Division of responsibility: Equal
 
-* Code quality:
+* Code quality: Solid
