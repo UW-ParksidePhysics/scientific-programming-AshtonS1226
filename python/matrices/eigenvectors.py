@@ -17,6 +17,3 @@ eigenvalues, eigenvectors = np.linalg.eig(combined_matrix)
 for eigenvalue, eigenvector in zip(eigenvalues, eigenvectors.transpose()):
     print(f'lambda = {eigenvalue}, x-vector = {eigenvector}\n')
 
-
-
-
