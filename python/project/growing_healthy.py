@@ -1,5 +1,9 @@
 """
 This module will analyze different types of positive and negative feedback and analyze it.
+
+Feedback: Plot the change in the feedback. Treat all questions as if they're on equal footing. Take the average of the
+first five questions and weigh them against the average of the last two questions. Analyze the standard deviation. Make
+bar graphs for the teacher responses and annotate the one critical feeback point.
 """
 __author__ = "Ashton Switzer"
 
