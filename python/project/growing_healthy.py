@@ -1,5 +1,5 @@
 """
-This module will analyze different types of positive and negative feedback and analyze it.
+This module will take different types of positive and negative feedback and analyze it.
 
 Feedback: Plot the change in the feedback. Treat all questions as if they're on equal footing. Take the average of the
 first five questions and weigh them against the average of the last two questions. Analyze the standard deviation. Make
@@ -147,5 +147,99 @@ if __name__ == '__main__':
 
 """This is going to be the section where the first five questions are plotted against the last two questions to analyze
 the change in feedback over time"""
+
+
+# This data covers 17 of the evaluations that were given. 4 were unable to be used because they had a different format
+data = [
+    # Evaluation 1
+    {
+        'before': [(16,2), (14,4), (16,2), (15,3), (17,1)],
+        'after': [(17,1), (18,0)]
+    },
+    # Evaluation 2
+    {
+        'before': [(18,1), (17,2), (19,0), (16,3), (19,0)],
+        'after': [(19,0), (19,0)]
+    },
+    # Evaluation 3
+    {
+        'before': [(17,4), (20,1), (20,1), (21,0), (21,0)],
+        'after': [(21,0), (21,0)]
+    },
+    # Evaluation 4
+    {
+        'before': [(20,1), (18,3), (20,1), (20,1), (20,1)],
+        'after': [(20,1), (21,0)]
+    },
+    # Evaluation 5
+    {
+        'before': [(14,4), (17,1), (16,2), (15,3), (17,1)],
+        'after': [(12,6), (17,1)]
+    },
+    # Evaluation 6
+    {
+        'before': [(14,2), (15,1), (14,2), (16,0), (16,0)],
+        'after': [(13,3), (14,2)]
+    },
+    # Evaluation 7
+    {
+        'before': [(17,0), (17,0), (17,0), (17,0), (17,0)],
+        'after': [(15,2), (15,2)]
+    },
+    # Evaluation 8
+    {
+        'before': [(15,5), (14,6), (14,6), (17,3), (17,3)],
+        'after': [(20,0), (20,0)]
+    },
+    # Evaluation 9
+    {
+        'before': [(8,8), (12,4), (13,3), (12,4), (12,4)],
+        'after': [(16,0), (16,0)]
+    },
+    # Evaluation 10
+    {
+        'before': [(11,2), (11,2), (13,0), (13,0), (13,0)],
+        'after': [(12,1), (13,0)]
+    },
+    # Evaluation 11
+    {
+        'before': [(17,9), (23,3), (24,2), (25,1), (26,0)],
+        'after': [(26,0), (25,1)]
+    },
+    # Evaluation 12
+    {
+        'before': [(22,2), (24,0), (23,1), (24,0), (23,1)],
+        'after': [(17,7), (19,5)]
+    },
+    # Evaluation 13
+    {
+        'before': [(10,8), (9,9), (16,2), (17,1), (17,1)],
+        'after': [(18,0), (17,1)]
+    },
+    # Evaluation 14
+    {
+        'before': [(18,2), (19,1), (19,1), (19,1), (17,3)],
+        'after': [(17,3), (16,4)]
+    },
+    # Evaluation 15
+    {
+        'before': [(19,2), (21,0), (21,0), (21,0), (21,0)],
+        'after': [(21,0), (21,0)]
+    },
+    # Evaluation 16
+    {
+        'before': [(16,6), (22,0), (20,2), (20,2), (22,0)],
+        'after': [(20,2), (21,1)]
+    },
+    # Evaluation 17
+    {
+        'before': [(14,4), (17,1), (17,1), (16,2), (15,3)],
+        'after': [(13,5), (13,5)]
+    }
+]
+
+
+
+
 
 
