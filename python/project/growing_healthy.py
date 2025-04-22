@@ -238,8 +238,39 @@ data = [
     }
 ]
 
+"""This next part calculates the average positive feedback (percentage of hands raised) before and after the 
+field trip across all 17 papers."""
 
+def average_positive_feedback(data, section):
+    totals = []
+    for entry in data:
+        total_positive = sum([q[0] for q in entry[section]]) # sum of "hands up" for the given section
+        total_responses = sum([q[0] + q[1] for q in entry[section]]) # total responses (up + down)
+        totals.append(total_positive/total_responses)
+    return sum(totals) / len(totals)
 
+# Calculate averages for before and after the field trip
+avg_before = average_positive_feedback(data, 'before')
+avg_after = average_positive_feedback(data, 'after')
 
+# The averages printed as percentages
+print(f"Average Positive Feedback Before Field Trip: {avg_before * 100:.2f}%")
+print(f"Average Positive Feedback After Field Trip: {avg_after * 100:.2f}%")
+
+# This next step is the part where I added the visualizations.
+
+import matplotlib.pyplot as plt
+
+labels = ['Before Trip', 'After Trip']
+values = [avg_before * 100, avg_after * 100] #This is the conversion to percentages
+
+plt.bar(labels, values, color=['blue', 'green'])
+plt.ylabel('Average Positive Feedback (%)')
+plt.title('Class Feedback Before and After Field Trip')
+plt.ylim(0, 100) # Keeps the y-axis between 0 and 100%
+
+plt.show()
+
+#Note: I want to find a way to incorporate the standard deviation, but I couldn't really figure out how to do that.
 
 
