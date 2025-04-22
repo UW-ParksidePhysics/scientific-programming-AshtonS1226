@@ -241,6 +241,8 @@ data = [
 """This next part calculates the average positive feedback (percentage of hands raised) before and after the 
 field trip across all 17 papers."""
 
+import numpy as np
+
 def average_positive_feedback(data, section):
     totals = []
     for entry in data:
@@ -248,6 +250,19 @@ def average_positive_feedback(data, section):
         total_responses = sum([q[0] + q[1] for q in entry[section]]) # total responses (up + down)
         totals.append(total_positive/total_responses)
     return sum(totals) / len(totals)
+
+# Function for calculating standard deviation
+def std_dev_positive_feedback(data, section):
+    ratios = []
+    for entry in data:
+        total_positive = sum([q[0] for q in entry[section]])
+        total_responses = sum([q[0] + q[1] for q in entry[section]])
+        ratios.append(total_positive/total_responses)
+    return np.std(ratios, ddof=1)
+
+# Shows the standard deviation before and after the field trip.
+std_before = std_dev_positive_feedback(data, 'before') * 100
+std_after = std_dev_positive_feedback(data, 'after') * 100
 
 # Calculate averages for before and after the field trip
 avg_before = average_positive_feedback(data, 'before')
@@ -263,16 +278,41 @@ import matplotlib.pyplot as plt
 
 labels = ['Before Trip', 'After Trip']
 values = [avg_before * 100, avg_after * 100] #This is the conversion to percentages
+errors = [std_before, std_after]
+
+fig, ax = plt.subplots()
+bars = ax.bar(labels, values, color=['blue', 'green'], yerr=errors, capsize=10, width=0.6)
+
+# Fuzzy blocks (chat gpt)
+for bar, std in zip(bars, errors):
+    height= bar.get_height()
+    ax.add_patch(plt.Rectangle(
+        (bar.get_x(), height),
+        bar.get_width(),
+        std,
+        alpha=0.2,
+        color=bar.get_facecolor()
+    ))
+
+ax.set_ylabel('Average Positive Feedback (%)')
+ax.set_title('Class Feedback Before and After Field Trip')
+ax.set_ylim(0,110)
+
+plt.show()
 
 plt.bar(labels, values, color=['blue', 'green'])
 plt.ylabel('Average Positive Feedback (%)')
 plt.title('Class Feedback Before and After Field Trip')
 plt.ylim(0, 100) # Keeps the y-axis between 0 and 100%
 
-plt.show()
+#plt.show()
+
 
 #Note: I want to find a way to incorporate the standard deviation, but I couldn't really figure out how to do that.
 
 # I also need to structure the last part with the if __name__ == '__main__':
+
+# Calculate standard deviation, draw a fuzzy box showing it, and then draw an arrow (maybe curved)
+
 
 
