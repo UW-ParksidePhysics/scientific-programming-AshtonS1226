@@ -273,4 +273,6 @@ plt.show()
 
 #Note: I want to find a way to incorporate the standard deviation, but I couldn't really figure out how to do that.
 
+# I also need to structure the last part with the if __name__ == '__main__':
+
 
