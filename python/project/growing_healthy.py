@@ -106,7 +106,7 @@ def make_teacher_response_graph_1():
     #labels
     plt.xlabel('Rating')
     plt.ylabel('Response')
-    plt.title('Teacher Responses to Question 1')
+    plt.title('Teacher Responses to Question 1: How much does this field trip relate to your course curriculum?')
 
     plt.show()
 
@@ -136,7 +136,7 @@ def make_teacher_response_graph_2():
     #labels
     plt.xlabel('Rating')
     plt.ylabel('Response')
-    plt.title('Teacher Responses to Question 2')
+    plt.title('Teacher Responses to Question 2: How engaging were the activities for your students?')
 
     plt.show()
 
