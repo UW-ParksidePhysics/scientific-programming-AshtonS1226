@@ -5,55 +5,6 @@ Feedback: Plot the change in the feedback. Treat all questions as if they're on 
 first five questions and weigh them against the average of the last two questions. Analyze the standard deviation. Make
 bar graphs for the teacher responses and annotate the one critical feedback point.
 """
-import numpy
-
-#__author__ = "Ashton Switzer"
-
-#import numpy as np
-#import matplotlib.pyplot as plt
-
-
-#def test_plot():
-
-    # Line
- #   intercepts = [4,3]
-  #  x_bounds = np.array([-3,8])
-   # x_values = np.linspace(x_bounds[0],x_bounds[1],100)
-    # y_bounds = -intercepts[1] * x_bounds / intercepts[0] + intercepts[1]
-    #y_values = -intercepts[1] *x_values / intercepts[0] + intercepts[1]
-
-    # Circle
-    #radius = intercepts[0]
-    #angles = np.linspace(0, 2 * np.pi, 100)
-    #circle_xs = radius * np.cos(angles)
-    #circle_ys = radius * np.sin(angles)
-
-    # plt.plot(x_bounds, y_bounds)
-   # plt.plot( x_values, y_values )
-    #plt.plot( circle_xs, circle_ys )
-    #plt.show()
-
-    #return
-
-
-#if __name__ == '__main__':
- #   object_data = {'Earth': 9.8, 'Moon': 1.6, 'Mars': 3.7} # surface gravity [m/s/s]
-  #  starting_velocity = 10 # m/s
-   # times = np.linspace(0,5)
-    #for planet_data in object_data.items():
-     #   velocities = velocity_in_time(times, initial_velocity=starting_velocity,
-      #                                gravitational_acceleration=planet_data[1])
-       # plt.plot( times, velocities, lavel=planet_data[0])
-
-    #plt.text(0,-1, f'Initial velocity: {starting_velocity: .0f} m/s')
-    #plt.xlabel("Time (s)")
-    #plt.ylabel("Velocity (m/s)")
-    #plt.legend()
-    #plt.show()
-# Need to define velociy_in_time outside of class.
-    # test_plot()
-
-
 
 #### RENAME from growing_healthy.py to (your_project_short_name).py
 # File structure
@@ -115,8 +66,6 @@ if __name__ == '__main__':
     make_teacher_response_graph_1()
 
 
-
-
 """This is the bar graph for the second out of two questions in the teacher responses"""
 
 import numpy as np
@@ -148,100 +97,10 @@ if __name__ == '__main__':
 """This is going to be the section where the first five questions are plotted against the last two questions to analyze
 the change in feedback over time"""
 
-
-# This data covers 17 of the evaluations that were given. 4 were unable to be used because they had a different format
-data = [
-    # Evaluation 1
-    {
-        'before': [(16,2), (14,4), (16,2), (15,3), (17,1)],
-        'after': [(17,1), (18,0)]
-    },
-    # Evaluation 2
-    {
-        'before': [(18,1), (17,2), (19,0), (16,3), (19,0)],
-        'after': [(19,0), (19,0)]
-    },
-    # Evaluation 3
-    {
-        'before': [(17,4), (20,1), (20,1), (21,0), (21,0)],
-        'after': [(21,0), (21,0)]
-    },
-    # Evaluation 4
-    {
-        'before': [(20,1), (18,3), (20,1), (20,1), (20,1)],
-        'after': [(20,1), (21,0)]
-    },
-    # Evaluation 5
-    {
-        'before': [(14,4), (17,1), (16,2), (15,3), (17,1)],
-        'after': [(12,6), (17,1)]
-    },
-    # Evaluation 6
-    {
-        'before': [(14,2), (15,1), (14,2), (16,0), (16,0)],
-        'after': [(13,3), (14,2)]
-    },
-    # Evaluation 7
-    {
-        'before': [(17,0), (17,0), (17,0), (17,0), (17,0)],
-        'after': [(15,2), (15,2)]
-    },
-    # Evaluation 8
-    {
-        'before': [(15,5), (14,6), (14,6), (17,3), (17,3)],
-        'after': [(20,0), (20,0)]
-    },
-    # Evaluation 9
-    {
-        'before': [(8,8), (12,4), (13,3), (12,4), (12,4)],
-        'after': [(16,0), (16,0)]
-    },
-    # Evaluation 10
-    {
-        'before': [(11,2), (11,2), (13,0), (13,0), (13,0)],
-        'after': [(12,1), (13,0)]
-    },
-    # Evaluation 11
-    {
-        'before': [(17,9), (23,3), (24,2), (25,1), (26,0)],
-        'after': [(26,0), (25,1)]
-    },
-    # Evaluation 12
-    {
-        'before': [(22,2), (24,0), (23,1), (24,0), (23,1)],
-        'after': [(17,7), (19,5)]
-    },
-    # Evaluation 13
-    {
-        'before': [(10,8), (9,9), (16,2), (17,1), (17,1)],
-        'after': [(18,0), (17,1)]
-    },
-    # Evaluation 14
-    {
-        'before': [(18,2), (19,1), (19,1), (19,1), (17,3)],
-        'after': [(17,3), (16,4)]
-    },
-    # Evaluation 15
-    {
-        'before': [(19,2), (21,0), (21,0), (21,0), (21,0)],
-        'after': [(21,0), (21,0)]
-    },
-    # Evaluation 16
-    {
-        'before': [(16,6), (22,0), (20,2), (20,2), (22,0)],
-        'after': [(20,2), (21,1)]
-    },
-    # Evaluation 17
-    {
-        'before': [(14,4), (17,1), (17,1), (16,2), (15,3)],
-        'after': [(13,5), (13,5)]
-    }
-]
-
-"""This next part calculates the average positive feedback (percentage of hands raised) before and after the 
-field trip across all 17 papers."""
-
 import numpy as np
+import matplotlib.pyplot as plt
+
+# Functions
 
 def average_positive_feedback(data, section):
     totals = []
@@ -260,6 +119,102 @@ def std_dev_positive_feedback(data, section):
         ratios.append(total_positive/total_responses)
     return np.std(ratios, ddof=1)
 
+# Execution
+
+if __name__ == '__main__':
+    """This next part calculates the average positive feedback (percentage of hands raised) before and after the 
+    field trip across all 17 papers, as well as computing the standard deviation. It is all show and represented in a 
+    graph, as well as showing the change."""
+
+    # This data covers 17 of the evaluations that were given. 4 were unable to be used because they had a different format
+    data = [
+        # Evaluation 1
+        {
+            'before': [(16, 2), (14, 4), (16, 2), (15, 3), (17, 1)],
+            'after': [(17, 1), (18, 0)]
+        },
+        # Evaluation 2
+        {
+            'before': [(18, 1), (17, 2), (19, 0), (16, 3), (19, 0)],
+            'after': [(19, 0), (19, 0)]
+        },
+        # Evaluation 3
+        {
+            'before': [(17, 4), (20, 1), (20, 1), (21, 0), (21, 0)],
+            'after': [(21, 0), (21, 0)]
+        },
+        # Evaluation 4
+        {
+            'before': [(20, 1), (18, 3), (20, 1), (20, 1), (20, 1)],
+            'after': [(20, 1), (21, 0)]
+        },
+        # Evaluation 5
+        {
+            'before': [(14, 4), (17, 1), (16, 2), (15, 3), (17, 1)],
+            'after': [(12, 6), (17, 1)]
+        },
+        # Evaluation 6
+        {
+            'before': [(14, 2), (15, 1), (14, 2), (16, 0), (16, 0)],
+            'after': [(13, 3), (14, 2)]
+        },
+        # Evaluation 7
+        {
+            'before': [(17, 0), (17, 0), (17, 0), (17, 0), (17, 0)],
+            'after': [(15, 2), (15, 2)]
+        },
+        # Evaluation 8
+        {
+            'before': [(15, 5), (14, 6), (14, 6), (17, 3), (17, 3)],
+            'after': [(20, 0), (20, 0)]
+        },
+        # Evaluation 9
+        {
+            'before': [(8, 8), (12, 4), (13, 3), (12, 4), (12, 4)],
+            'after': [(16, 0), (16, 0)]
+        },
+        # Evaluation 10
+        {
+            'before': [(11, 2), (11, 2), (13, 0), (13, 0), (13, 0)],
+            'after': [(12, 1), (13, 0)]
+        },
+        # Evaluation 11
+        {
+            'before': [(17, 9), (23, 3), (24, 2), (25, 1), (26, 0)],
+            'after': [(26, 0), (25, 1)]
+        },
+        # Evaluation 12
+        {
+            'before': [(22, 2), (24, 0), (23, 1), (24, 0), (23, 1)],
+            'after': [(17, 7), (19, 5)]
+        },
+        # Evaluation 13
+        {
+            'before': [(10, 8), (9, 9), (16, 2), (17, 1), (17, 1)],
+            'after': [(18, 0), (17, 1)]
+        },
+        # Evaluation 14
+        {
+            'before': [(18, 2), (19, 1), (19, 1), (19, 1), (17, 3)],
+            'after': [(17, 3), (16, 4)]
+        },
+        # Evaluation 15
+        {
+            'before': [(19, 2), (21, 0), (21, 0), (21, 0), (21, 0)],
+            'after': [(21, 0), (21, 0)]
+        },
+        # Evaluation 16
+        {
+            'before': [(16, 6), (22, 0), (20, 2), (20, 2), (22, 0)],
+            'after': [(20, 2), (21, 1)]
+        },
+        # Evaluation 17
+        {
+            'before': [(14, 4), (17, 1), (17, 1), (16, 2), (15, 3)],
+            'after': [(13, 5), (13, 5)]
+        }
+    ]
+
 # Shows the standard deviation before and after the field trip.
 std_before = std_dev_positive_feedback(data, 'before') * 100
 std_after = std_dev_positive_feedback(data, 'after') * 100
@@ -272,9 +227,7 @@ avg_after = average_positive_feedback(data, 'after')
 print(f"Average Positive Feedback Before Field Trip: {avg_before * 100:.2f}%")
 print(f"Average Positive Feedback After Field Trip: {avg_after * 100:.2f}%")
 
-# This next step is the part where I added the visualizations.
-
-import matplotlib.pyplot as plt
+# Create the visualizations
 
 labels = ['Before Trip', 'After Trip']
 values = [avg_before * 100, avg_after * 100] #This is the conversion to percentages
@@ -282,6 +235,31 @@ errors = [std_before, std_after]
 
 fig, ax = plt.subplots()
 bars = ax.bar(labels, values, color=['blue', 'green'], yerr=errors, capsize=10, width=0.6)
+
+# Calculate percent change
+percent_change = ((avg_after - avg_before) / avg_before) * 100
+
+# Get bar center positions
+x_before = bars[0].get_x() + bars[0].get_width() / 2
+x_after = bars[1].get_x() + bars[1].get_width() / 2
+y_before = values[0]
+y_after = values[1]
+
+# Midpoint between bars
+x_middle = (x_before + x_after) / 2
+y_middle = (y_before + y_after) / 2 + 10  # 10 units higher for visibility
+
+# Place the percent change text
+ax.text(
+    x_middle,
+    y_middle,
+    f'{percent_change:+.1f}%',
+    ha='center',
+    va='bottom',
+    fontsize=12,
+    fontweight='bold',
+    color='black'
+)
 
 # Fuzzy blocks (chat gpt)
 for bar, std in zip(bars, errors):
@@ -296,23 +274,6 @@ for bar, std in zip(bars, errors):
 
 ax.set_ylabel('Average Positive Feedback (%)')
 ax.set_title('Class Feedback Before and After Field Trip')
-ax.set_ylim(0,110)
+ax.set_ylim(0, max(values) + 20)
 
 plt.show()
-
-plt.bar(labels, values, color=['blue', 'green'])
-plt.ylabel('Average Positive Feedback (%)')
-plt.title('Class Feedback Before and After Field Trip')
-plt.ylim(0, 100) # Keeps the y-axis between 0 and 100%
-
-#plt.show()
-
-
-#Note: I want to find a way to incorporate the standard deviation, but I couldn't really figure out how to do that.
-
-# I also need to structure the last part with the if __name__ == '__main__':
-
-# Calculate standard deviation, draw a fuzzy box showing it, and then draw an arrow (maybe curved)
-
-
-
