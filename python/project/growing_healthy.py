@@ -48,7 +48,7 @@ import matplotlib.pyplot as plt
 
 
 def make_teacher_response_graph_1():
-    #Bar graph for the question "How much does this trip relate to your curriculum?
+    #Bar graph for the question "How much does this trip relate to your curriculum?"
     ratings = [1,2,3,4,5]
     responses = [5,5,4,5,5,4,5,5,5,5,2,5,4,5,5,5,5]
     counts = np.bincount(responses)[1:]
