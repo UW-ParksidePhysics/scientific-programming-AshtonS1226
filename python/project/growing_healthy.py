@@ -34,6 +34,10 @@ bar graphs for the teacher responses and annotate the one critical feedback poin
 #		simulation solution 
 #		visualization
 
+# This project produced three visualizations. One was a bar graph that showed the teacher responses to a question. The
+# second was another bar graph that showed the teacher responses to a second question. Lastly, there was a third bar
+# chart that compared results of the student evaluations before and after the field trip. This was to help determine
+# whether or not the feedback was more positive after the field trip was over.
 
 __author__ = "Ashton Switzer"
 
