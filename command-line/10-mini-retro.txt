@@ -1,17 +1,18 @@
-Partner:
+Partner: Sofia
 
 What Went Well
----
+Communication
 
 
 What Would Make Next Time 1% Better
----
+Better understanding of how to move between directories
 * Focus:
-
+Decent
 * Communication:
-
+Great
 * Pacing:
-
+A little slow
 * Division of responsibility
-
+Equal
 * Code quality:
+Decent
