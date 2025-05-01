@@ -1,17 +1,18 @@
-Partner:
+Partner: Ended up finishing the work myself
 
 What Went Well
----
+everything
 
 
 What Would Make Next Time 1% Better
----
+not much
 * Focus:
-
+good
 * Communication:
-
+great with myself lol
 * Pacing:
-
+fast
 * Division of responsibility
-
+equal
 * Code quality:
+great

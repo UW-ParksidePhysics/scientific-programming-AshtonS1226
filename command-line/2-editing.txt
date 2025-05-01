@@ -1,1 +1,24 @@
+ashto@Ashton MINGW64 ~
+$ cd documents
+
+ashto@Ashton MINGW64 ~/documents
+$ touch notes.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ vi notes.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ cat notes.txt
+This is my first file created in the terminal
+
+ashto@Ashton MINGW64 ~/documents
+$ touch shopping_list.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ vi shopping_list.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ cat shopping_list.txt
+apples, bread, milk, coffee.
+
 
