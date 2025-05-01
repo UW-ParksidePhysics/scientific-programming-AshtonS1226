@@ -1,1 +1,51 @@
+ashto@Ashton MINGW64 ~
+$ cd documents
+
+ashto@Ashton MINGW64 ~/documents
+$ mkdir lesson4-practie
+
+ashto@Ashton MINGW64 ~/documents
+$ rmdir lesson4-practie
+
+ashto@Ashton MINGW64 ~/documents
+$ mkdir lesson4-practice
+
+ashto@Ashton MINGW64 ~/documents
+$ mkdir -p lesson4-practice/data/2025
+
+ashto@Ashton MINGW64 ~/documents
+$ cd documents
+bash: cd: documents: No such file or directory
+
+ashto@Ashton MINGW64 ~/documents
+$ find lesson4-practice -type d
+lesson4-practice
+lesson4-practice/data
+lesson4-practice/data/2025
+
+ashto@Ashton MINGW64 ~/documents
+$ cd Documents
+bash: cd: Documents: No such file or directory
+
+ashto@Ashton MINGW64 ~/documents
+$ rmdir lesson4-practice/data/2025
+
+ashto@Ashton MINGW64 ~/documents
+$ mkdir Documents
+
+ashto@Ashton MINGW64 ~/documents
+$ cd Documents
+
+ashto@Ashton MINGW64 ~/documents/Documents
+$ mkdir projects
+
+ashto@Ashton MINGW64 ~/documents/Documents
+$ mkdir -p projects/frontend projects/backend projects/database
+
+ashto@Ashton MINGW64 ~/documents/Documents
+$ find lesson4-practice -type d
+find: ‘lesson4-practice’: No such file or directory
+
+ashto@Ashton MINGW64 ~/documents/Documents
+$ rm -r projects
 

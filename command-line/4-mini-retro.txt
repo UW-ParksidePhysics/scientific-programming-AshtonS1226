@@ -1,17 +1,18 @@
 Partner:
-
+Myself
 What Went Well
----
+I feel like when I ran into an issue, I overcame it pretty quickly.
 
 
 What Would Make Next Time 1% Better
----
+making sure I have the right directories.
 * Focus:
-
+Good
 * Communication:
-
+Good
 * Pacing:
-
+Quick
 * Division of responsibility
-
+Equal
 * Code quality:
+Decent
