@@ -1,17 +1,18 @@
-Partner:
+Partner: Myself
 
 What Went Well
----
+Writing Python code. I'm getting a lot more comfortable with it.
 
 
 What Would Make Next Time 1% Better
----
-* Focus:
+Finding out how to connect my terminal with Python, because for whatever reason,
+it didn't want to run, saying that I needed to download something.
+* Focus: Good
 
-* Communication:
+* Communication: Good
 
-* Pacing:
+* Pacing: Fast
 
-* Division of responsibility
+* Division of responsibility: Equal
 
-* Code quality:
+* Code quality: Good

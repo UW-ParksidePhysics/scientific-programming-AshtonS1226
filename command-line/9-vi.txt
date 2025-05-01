@@ -1,1 +1,24 @@
+ashto@Ashton MINGW64 ~
+$ vi text.txt
+
+ashto@Ashton MINGW64 ~
+$ vi text.txt
+
+ashto@Ashton MINGW64 ~
+$ vi test.py
+
+ashto@Ashton MINGW64 ~
+$ cat test.py
+def calculate():
+    text = "This is a test function"
+    print(text)
+    result = 5 + 3
+    print("Result:", result)
+
+if __name__ == '__main__':
+    calculate()
+
+ashto@Ashton MINGW64 ~
+$ python3 test.py
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
 
