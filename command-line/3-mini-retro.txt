@@ -1,17 +1,18 @@
-Partner:
+Partner: Myself
 
 What Went Well
----
+using mkdir ended up being pretty easy.
 
 
 What Would Make Next Time 1% Better
----
-* Focus:
+remembering how to create the practice file. I ended up figuring it out though.
+* Focus: good
 
 * Communication:
-
-* Pacing:
+good
+* Pacing: fast
 
 * Division of responsibility
-
+equal
 * Code quality:
+good

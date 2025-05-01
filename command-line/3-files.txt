@@ -1,1 +1,45 @@
+ashto@Ashton MINGW64 ~
+$ cd documents
+
+ashto@Ashton MINGW64 ~/documents
+$ cp 3-files.txt backup_files.txt
+cp: cannot stat '3-files.txt': No such file or directory
+
+ashto@Ashton MINGW64 ~/documents
+$ touch 3-files.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ cp 3-files.txt backup_files.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ mv backup_files.txt renamed_files.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ rm renamed_files.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ rm 3-files.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ mkdir shopping_list.txt
+mkdir: cannot create directory ‘shopping_list.txt’: File exists
+
+ashto@Ashton MINGW64 ~/documents
+$ rm shopping_list.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ mkdir shopping_list.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ touch shopping_list.txt
+
+ashto@Ashton MINGW64 ~/documents
+$ mv shopping_list.txt practice_directory/
+
+ashto@Ashton MINGW64 ~/documents
+$ ls -R practice_directory
+practice_directory:
+
+ashto@Ashton MINGW64 ~/documents
+$ rm -r practice_directory
 
