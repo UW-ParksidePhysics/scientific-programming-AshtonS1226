@@ -13,26 +13,6 @@ bar graphs for the teacher responses and annotate the one critical feedback poin
 # 3. Function definitions
 # 4. if __name__ == "__main__" block, which calls a primary function with a clear name 
 
-# All code is inside function definitions for simulation solution & visualization (functional programming)
-#	Each function contains a docstring compliant with PEP 257: https://www.python.org/dev/peps/pep-0257/
-#	Module ends with if __name__ == "__main__" block to execute central function of the code
-
-# Primary simulation function structure
-#	1. Module imports
-#		Use SciPy constants for physical constants in particular function (not globally)
-#			https://docs.scipy.org/doc/scipy/reference/constants.html
-#		Follow best practice order: 
-#			https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module
-# 	2. Simulation parameters
-#		Each parameter named clearly and units marked in in-line comment
-#		Naming of all variables should comply with PEP 8: 
-#			https://www.python.org/dev/peps/pep-0008/#documentation-strings
-#			(lower_case_with_underscores)
-# 	3. Computed parameters (from simulation parameters)
-# 	4. Function calls (use PEP 8-compliant lower_case_with_underscores) and simple calculations for:
-#		data read-in
-#		simulation solution 
-#		visualization
 
 # This project produced three visualizations. One was a bar graph that showed the teacher responses to a question. The
 # second was another bar graph that showed the teacher responses to a second question. Lastly, there was a third bar
@@ -48,7 +28,7 @@ import matplotlib.pyplot as plt
 
 
 def make_teacher_response_graph_1():
-    # Bar graph for the question "How much does this trip relate to your curriculum?"
+    # Bar graph for question "How much does this trip relate to your curriculum?"
     ratings = [1,2,3,4,5]
     responses = [5,5,4,5,5,4,5,5,5,5,2,5,4,5,5,5,5]
     counts = np.bincount(responses)[1:]
@@ -74,7 +54,7 @@ if __name__ == '__main__':
 
 
 def make_teacher_response_graph_2():
-    # Bar graph for the question "How engaging were the activities for your students?"
+    # Bar graph for question "How engaging were the activities for your students?"
     ratings = [1,2,3,4,5]
     responses = [5,5,5,5,3,5,5,5,5,4,5,5,5,5,5,5,5]
     counts = np.bincount(responses)[1:]
@@ -110,7 +90,7 @@ def average_positive_feedback(data, section):
         totals.append(total_positive/total_responses)
     return sum(totals) / len(totals)
 
-# Function for calculating standard deviation
+# Calculating standard deviation
 def std_dev_positive_feedback(data, section):
     ratios = []
     for entry in data:
@@ -126,7 +106,7 @@ if __name__ == '__main__':
     field trip across all 17 papers, as well as computing the standard deviation. It is all show and represented in a 
     graph, as well as showing the change."""
 
-    # This data covers 17 of the evaluations that were given. 4 were unable to be used because they had a different format
+    # This data covers 17 of the evaluations that were given. 4 couldn't be used because they had a different format
     data = [
         # Evaluation 1
         {
@@ -215,15 +195,15 @@ if __name__ == '__main__':
         }
     ]
 
-# Shows the standard deviation before and after the field trip.
+# Standard deviation
 std_before = std_dev_positive_feedback(data, 'before') * 100
 std_after = std_dev_positive_feedback(data, 'after') * 100
 
-# Calculate averages for before and after the field trip
+# Calculate averages
 avg_before = average_positive_feedback(data, 'before')
 avg_after = average_positive_feedback(data, 'after')
 
-# The averages printed as percentages
+# Averages printed as percentages
 print(f"Average Positive Feedback Before Field Trip: {avg_before * 100:.2f}%")
 print(f"Average Positive Feedback After Field Trip: {avg_after * 100:.2f}%")
 
