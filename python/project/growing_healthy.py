@@ -48,17 +48,17 @@ import matplotlib.pyplot as plt
 
 
 def make_teacher_response_graph_1():
-    #Bar graph for the question "How much does this trip relate to your curriculum?"
+    # Bar graph for the question "How much does this trip relate to your curriculum?"
     ratings = [1,2,3,4,5]
     responses = [5,5,4,5,5,4,5,5,5,5,2,5,4,5,5,5,5]
     counts = np.bincount(responses)[1:]
     question = "On a scale of 1-5, how much does this field trip relate to your course curriculum?"
 
-    #bar chart
+    # bar chart
     plt.figure(figsize=(17,5))
     plt.bar(ratings,counts,color='red')
 
-    #labels
+    # labels
     plt.xlabel('Rating')
     plt.ylabel('Response')
     plt.title('Teacher Responses to Question 1: How much does this field trip relate to your course curriculum?')
@@ -72,8 +72,6 @@ if __name__ == '__main__':
 
 """This is the bar graph for the second out of two questions in the teacher responses"""
 
-import numpy as np
-import matplotlib.pyplot as plt
 
 def make_teacher_response_graph_2():
     # Bar graph for the question "How engaging were the activities for your students?"
@@ -86,7 +84,7 @@ def make_teacher_response_graph_2():
     plt.figure(figsize=(17,5))
     plt.bar(ratings,counts,color='blue')
 
-    #labels
+    # labels
     plt.xlabel('Rating')
     plt.ylabel('Response')
     plt.title('Teacher Responses to Question 2: How engaging were the activities for your students?')
@@ -101,8 +99,6 @@ if __name__ == '__main__':
 """This is going to be the section where the first five questions are plotted against the last two questions to analyze
 the change in feedback over time"""
 
-import numpy as np
-import matplotlib.pyplot as plt
 
 # Functions
 
