@@ -1,3 +1,4 @@
+
 import vpython as vp
 
 initial_position = vp.vector(-1., 0., 0.)

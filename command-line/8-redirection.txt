@@ -12,6 +12,7 @@ Let's learn about redirection
 ashto@Ashton MINGW64 ~
 $ rm greeting.txt
 
+
 ashto@Ashton MINGW64 ~
 $ echo "File 1" > list.txt
 
