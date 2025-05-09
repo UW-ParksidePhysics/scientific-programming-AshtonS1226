@@ -22,12 +22,20 @@ def sort_by_luminosity(star):
     return star[3]
 
 def print_table(header1, header2, data, key_index):
-    print(f"\n{heater1:<25} {header2}")
+    print(f"\n{header1:<25} {header2}")
     print("-" * 40)
     for star in data:
         print(f"{star[0]:<25} {star[key_index]:.6f}")
 
 
-sorted_by_distance - sorted(nearby_star_data, key=sort_by_distance)
+sorted_by_distance = sorted(nearby_star_data, key=sort_by_distance)
 print_table("Star Name", "Distance (1y)", sorted_by_distance, 1)
+
+sorted_by_brightness = sorted(nearby_star_data, key=sort_by_brightness)
+print_table("Star Name", "Apparent Brightness", sorted_by_brightness, 2)
+
+sorted_by_luminosity = sorted(nearby_star_data, key=sort_by_luminosity)
+print_table("Star Name", "Luminosity", sorted_by_luminosity, 3)
+
+
 
