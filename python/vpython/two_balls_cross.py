@@ -1,20 +1,37 @@
 
 import vpython as vp
 
-initial_position = vp.vector(-1., 0., 0.)
-initial_velocity = vp.vector(1., 0., 0.)
-ball = vp.sphere(pos=initial_position, radius=0.1, color=vp.color.red, make_trail=True)
+# Set up the scene
+vp.scene.background = vp.color.white
+vp.scene.title = "Two Balls Crossing in 3D Space"
 
-animation_time_step = 0.1  # seconds
-rate_of_animation = 1/animation_time_step
+# Initial positions and velocities
+position1 = vp.vector(-1, 0, 0)
+velocity1 = vp.vector(0.5, 0.2, 0.1)
+position2 = vp.vector(1, 0, 0)
+velocity2 = vp.vector(-0.5, 0.2, -0.1)
+
+# Create two balls with trails made of small spheres
+ball1 = vp.sphere(pos=position1, radius=0.1, color=vp.color.red)
+ball2 = vp.sphere(pos=position2, radius=0.1, color=vp.color.blue)
+
+# Time setup
 time_step = 0.05
-stop_time = 10.
+stop_time = 10
+current_time = 0
 
-time = 0.
-while time < stop_time:
-    vp.rate(rate_of_animation)
-    x = initial_position.x + initial_velocity.x * time
-    y = initial_position.y + initial_velocity.y * time
-    z = initial_position.z + initial_velocity.z * time
-    ball.pos = vp.vector(x, y, z)
-    time += time_step
+# Animation loop
+while current_time < stop_time:
+    vp.rate(1 / time_step)
+
+    # Update positions
+    position1 += velocity1 * time_step
+    position2 += velocity2 * time_step
+    ball1.pos = position1
+    ball2.pos = position2
+
+    # Leave a trail of spheres behind
+    vp.sphere(pos=position1, radius=0.02, color=vp.color.red, opacity=0.4)
+    vp.sphere(pos=position2, radius=0.02, color=vp.color.blue, opacity=0.4)
+
+    current_time += time_step
