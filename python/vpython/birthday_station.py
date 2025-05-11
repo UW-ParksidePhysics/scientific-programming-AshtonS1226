@@ -215,3 +215,4 @@ while True:
             break
     gotv = False
     click1.visible = click2.visible = False
+    # jk;lasjdfj
