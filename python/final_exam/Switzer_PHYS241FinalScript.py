@@ -56,18 +56,17 @@ def analyze(filename, display_graph=False):
     # Bivariate statistics
     stats = calculate_bivariate_statistics(np.vstack([V,E]))
 
-    # Quadratic EOS fit (no SciPy)
+    # Quadratic EOS fit (no SciPy) (ChatGPT o4-mini-high "Can this be done without scipy?"
     # Fit E(V) = a*V^2 + b*V + c
     # Using numpy.polyfit gives highest-power-first coefficients
     p2, p1, p0 = np.polyfit(V, E, 2)  # p2*V^2 + p1*V + p0
     # Build fit curve
     V_fit = np.linspace(V.min(), V.max(), 200)
     E_fit = p2*V_fit**2 + p1*V_fit + p0
-    # Derive EOS-like params
     V0 = -p1/(2*p2)
     K0 = 2*p2*V0
     E0 = p2*V0**2 + p1*V0 + p0
-    K0p = 4.0  # placeholder derivative
+    K0p = 4.0
 
     #convert units
     V_A3      = convert_units(V, 'bohr^3/atom', 'Å^3/atom')
@@ -77,7 +76,7 @@ def analyze(filename, display_graph=False):
     V0_A3     = convert_units(V0, 'bohr^3/atom', 'Å^3/atom')
     K0_GPa    = convert_units(K0, 'rydberg/bohr^3', 'GPa')
 
-    # Plot EOS (quadratic)
+    # Plot EOS
     fig, ax = plt.subplots(figsize=(6,4))
     ax.plot(X_A3, E_fit_eV, 'k-', label='Quadratic Fit')
     ax.scatter(V_A3, E_eV, color='C0', label='DFT data')
